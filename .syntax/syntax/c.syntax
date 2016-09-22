@@ -1,0 +1,108 @@
+# Syntax rules for the C and the C++ programming languages
+
+context default
+    keyword whole auto brown
+    keyword whole break brown
+    keyword whole case brown
+    keyword whole char brown
+    keyword whole const brown
+    keyword whole continue brown
+    keyword whole do brown
+    keyword whole double brown
+    keyword whole else brown
+    keyword whole enum brown
+    keyword whole extern brown
+    keyword whole float brown
+    keyword whole for brown
+    keyword whole goto brown
+    keyword whole if brown
+    keyword whole int brown
+    keyword whole long brown
+    keyword whole register brown
+    keyword whole return brown
+    keyword whole short brown
+    keyword whole signed brown
+    keyword whole sizeof brown
+    keyword whole static brown
+    keyword whole struct brown
+    keyword whole switch brown
+    keyword whole typedef brown
+    keyword whole union brown
+    keyword whole unsigned brown
+    keyword whole void brown
+    keyword whole volatile brown
+    keyword whole while brown
+    keyword whole asm brown
+    keyword whole inline brown
+    keyword whole wchar_t brown
+    keyword whole ... brown
+    keyword whole linestart \{\s\t\}\[\s\t\]#*\n brightmagenta
+    keyword whole \[\s\t\]default brown
+    keyword whole linestart \[\s\t\]\{ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\}\[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\]: cyan
+
+    keyword /\* brown
+    keyword \*/ brown
+    keyword // brown
+
+    keyword '\\\{"abtnvfr\}' brightgreen
+    keyword '\\\{0123\}\{01234567\}\{01234567\}' brightgreen
+    keyword '\\'' brightgreen
+    keyword '\\\\' brightgreen
+    keyword '\\0' brightgreen
+    keyword '\{\s!"#$%&()\*\+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ\}' brightgreen
+
+# punctuation characters, sorted by ASCII code
+    keyword ! brown
+    keyword % brown
+    keyword && brown
+    keyword & brightmagenta
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword \* brown
+    keyword \+ brown
+    keyword , brightcyan
+    keyword - brown
+    keyword / brown
+    keyword : brightcyan
+    keyword ; brightmagenta
+    keyword < brown
+    keyword = brown
+    keyword > brown
+    keyword ? brightcyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+    keyword ^ brightmagenta
+    keyword { brightcyan
+    keyword || brown
+    keyword | brightmagenta
+    keyword } brightcyan
+    keyword ~ brightmagenta
+
+context exclusive /\* \*/ brown
+    spellcheck
+
+context exclusive // \n brown
+    spellcheck
+
+context linestart # \n brightred
+    keyword \\\n brown
+    keyword /\**\*/ brown
+    keyword //*\n brown
+    keyword "+" red
+    keyword <+> red
+
+context " " green
+    spellcheck
+    keyword \\" brightgreen
+    keyword %% brightgreen
+    keyword %\[#0\s-\+,\]\[0123456789\*\]\[.\]\[0123456789\*\]\[L\]\{eEfgGoxX\} brightgreen
+    keyword %\[0\s-\+,\]\[0123456789\*\]\[.\]\[0123456789\*\]\[hl\]\{diuxX\} brightgreen
+    keyword %\[hl\]n brightgreen
+    keyword %\[-\]\[0123456789\*\]\[.\]\[0123456789\*\]s brightgreen
+    keyword %[*] brightgreen
+    keyword %c brightgreen
+    keyword %p brightgreen
+    keyword \\\{0123\}\{01234567\}\{01234567\} brightgreen
+    keyword \\\\ brightgreen
+    keyword \\' brightgreen
+    keyword \\\{abtnvfr\} brightgreen

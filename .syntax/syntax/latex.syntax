@@ -1,0 +1,274 @@
+context default
+wholechars left \\
+wholechars right abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+    spellcheck
+
+    keyword whole {\\it green
+    keyword } green
+    keyword whole {\\bf green
+    keyword } green
+    keyword { green
+
+    keyword \\$ brown
+
+# type style
+    keyword whole \\tiny brown
+    keyword whole \\scriptsize brown
+    keyword whole \\footnotesize brown
+    keyword whole \\small brown
+    keyword whole \\normalsize brown
+    keyword whole \\large brown
+    keyword whole \\Large brown
+    keyword whole \\LARGE brown
+    keyword whole \\huge brown
+    keyword whole \\Huge brown
+
+# accents and symbols
+    keyword whole \\\{`'^"~=.uvHtcdb\}{\{aeiouAEIOU\}} brown
+    keyword whole \\dag brown
+    keyword whole \\ddag brown
+    keyword whole \\S brown
+    keyword whole \\P brown
+    keyword whole \\copyright brown
+    keyword whole \\pounds brown
+
+# sectioning and table of contents
+    keyword whole \\part[*]{*} brightred
+    keyword whole \\part{*} brightred
+    keyword whole \\part\*{*} brightred
+    keyword whole \\chapter[*]{*} brightred
+    keyword whole \\chapter{*} brightred
+    keyword whole \\chapter\*{*} brightred
+    keyword whole \\section[*]{*} brightred
+    keyword whole \\section{*} brightred
+    keyword whole \\section\*{*} brightred
+    keyword whole \\subsection[*]{*} brightred
+    keyword whole \\subsection{*} brightred
+    keyword whole \\subsection\*{*} brightred
+    keyword whole \\subsubsection[*]{*} brightred
+    keyword whole \\subsubsection{*} brightred
+    keyword whole \\subsubsection\*{*} brightred
+    keyword whole \\paragraph[*]{*} brightred
+    keyword whole \\paragraph{*} brightred
+    keyword whole \\paragraph\*{*} brightred
+    keyword whole \\subparagraph[*]{*} brightred
+    keyword whole \\subparagraph{*} brightred
+    keyword whole \\subparagraph\*{*} brightred
+
+    keyword whole \\appendix brightred
+    keyword whole \\tableofcontents brightred
+
+# misc
+    keyword whole \\item[*] brown
+    keyword whole \\item brown
+    keyword whole \\\\ brown
+    keyword \\\s brown black
+    keyword \\@ brown black
+    keyword %% brown
+    keyword \\% brown
+
+# docuement and page styles
+    keyword whole \\documentstyle[*]{*} brown
+    keyword whole \\documentstyle{*} brown
+    keyword whole \\pagestyle{*} brown
+
+# cross references
+    keyword whole \\label{*} brown
+    keyword whole \\ref{*} brown
+
+# bibliography and citations
+    keyword whole \\bibliography{*} brown
+    keyword whole \\bibitem[*]{*} brown
+    keyword whole \\bibitem{*} brown
+    keyword whole \\cite[*]{*} brown
+    keyword whole \\cite{*} brown
+
+# splitting the input
+    keyword whole \\input{*} brown
+    keyword whole \\include{*} brown
+    keyword whole \\includeonly{*} brown
+
+# line breaking
+    keyword whole \\linebreak[\[01234\]] brown
+    keyword whole \\nolinebreak[\[01234\]] brown
+    keyword whole \\linebreak brown
+    keyword whole \\nolinebreak brown
+    keyword whole \\[+] brown
+    keyword whole \\- brown
+    keyword whole \\sloppy brown
+
+# page breaking
+    keyword whole \\pagebreak[\[01234\]] brown
+    keyword whole \\nopagebreak[\[01234\]] brown
+    keyword whole \\pagebreak brown
+    keyword whole \\nopagebreak brown
+    keyword whole \\samepage brown
+    keyword whole \\newpage brown
+    keyword whole \\clearpage brown
+
+# definitions
+    keyword \\newcommand{*}[*] cyan
+    keyword \\newcommand{*} cyan
+    keyword \\newenvironment{*}[*]{*} cyan
+    keyword \\newenvironment{*}{*} cyan
+
+# boxes
+
+# begins and ends
+    keyword \\begin{document} brightred
+    keyword \\begin{equation} brightred
+    keyword \\begin{displaymath} brightred
+    keyword \\begin{eqnarray} brightred
+    keyword \\begin{quote} brightred
+    keyword \\begin{quotation} brightred
+    keyword \\begin{center} brightred
+    keyword \\begin{verse} brightred
+    keyword \\begin{verbatim} brightred
+    keyword \\begin{itemize} brightred
+    keyword \\begin{enumerate} brightred
+    keyword \\begin{description} brightred
+    keyword \\begin{list} brightred
+    keyword \\begin{array} brightred
+    keyword \\begin{tabular} brightred
+    keyword \\begin{thebibliography}{*} brightred
+    keyword \\begin{sloppypar} brightred
+
+    keyword \\end{document} brightred
+    keyword \\end{equation} brightred
+    keyword \\end{displaymath} brightred
+    keyword \\end{eqnarray} brightred
+    keyword \\end{quote} brightred
+    keyword \\end{quotation} brightred
+    keyword \\end{center} brightred
+    keyword \\end{verse} brightred
+    keyword \\end{verbatim} brightred
+    keyword \\end{itemize} brightred
+    keyword \\end{enumerate} brightred
+    keyword \\end{description} brightred
+    keyword \\end{list} brightred
+    keyword \\end{array} brightred
+    keyword \\end{tabular} brightred
+    keyword \\end{thebibliography}{*} brightred
+    keyword \\end{sloppypar} brightred
+
+    keyword \\begin{*} cyan
+    keyword \\end{*} cyan
+
+    keyword \\theorem{*}{*} brown
+
+# if all else fails
+    keyword whole \\begin white
+    keyword whole \\+[*][*]{*}{*}{*} cyan
+    keyword whole \\+[*][*]{*}{*} cyan
+    keyword whole \\+[*]{*}{*}{*} cyan
+    keyword whole \\+[*]{*}{*} cyan
+    keyword whole \\+[*]{*} cyan
+    keyword whole \\+{*}{*}{*}{*} cyan
+    keyword whole \\+{*}{*}{*} cyan
+    keyword whole \\+{*}{*} cyan
+    keyword whole \\+{*} cyan
+    keyword whole \\+ cyan
+
+context exclusive whole {\\bf } brightmagenta
+    keyword whole \\tiny brown
+    keyword whole \\scriptsize brown
+    keyword whole \\footnotesize brown
+    keyword whole \\small brown
+    keyword whole \\normalsize brown
+    keyword whole \\large brown
+    keyword whole \\Large brown
+    keyword whole \\LARGE brown
+    keyword whole \\huge brown
+    keyword whole \\Huge brown
+    keyword whole \\\{`'^"~=.uvHtcdb\}{\{aeiouAEIOU\}} brown
+    keyword whole \\dag brown
+    keyword whole \\ddag brown
+    keyword whole \\S brown
+    keyword whole \\P brown
+    keyword whole \\copyright brown
+    keyword whole \\pounds brown
+    keyword whole \\\\ brown
+    keyword \\\s brown black
+    keyword \\@ brown black
+    keyword %% brown
+    keyword whole \\label{*} brown
+    keyword whole \\ref{*} brown
+    keyword whole \\bibitem[*]{*} brown
+    keyword whole \\bibitem{*} brown
+    keyword whole \\cite[*]{*} brown
+    keyword whole \\cite{*} brown
+    keyword whole \\[+] brown
+    keyword whole \\- brown
+    keyword whole \\sloppy brown
+    keyword whole \\+[*][*]{*}{*}{*} cyan
+    keyword whole \\+[*][*]{*}{*} cyan
+    keyword whole \\+[*]{*}{*}{*} cyan
+    keyword whole \\+[*]{*}{*} cyan
+    keyword whole \\+[*]{*} cyan
+    keyword whole \\+{*}{*}{*}{*} cyan
+    keyword whole \\+{*}{*}{*} cyan
+    keyword whole \\+{*}{*} cyan
+    keyword whole \\+{*} cyan
+    keyword whole \\+ cyan
+
+context exclusive whole {\\it } magenta
+    keyword whole \\tiny brown
+    keyword whole \\scriptsize brown
+    keyword whole \\footnotesize brown
+    keyword whole \\small brown
+    keyword whole \\normalsize brown
+    keyword whole \\large brown
+    keyword whole \\Large brown
+    keyword whole \\LARGE brown
+    keyword whole \\huge brown
+    keyword whole \\Huge brown
+    keyword whole \\\{`'^"~=.uvHtcdb\}{\{aeiouAEIOU\}} brown
+    keyword whole \\dag brown
+    keyword whole \\ddag brown
+    keyword whole \\S brown
+    keyword whole \\P brown
+    keyword whole \\copyright brown
+    keyword whole \\pounds brown
+    keyword whole \\\\ brown
+    keyword \\\s brown black
+    keyword \\@ brown black
+    keyword %% brown
+    keyword whole \\label{*} brown
+    keyword whole \\ref{*} brown
+    keyword whole \\bibitem[*]{*} brown
+    keyword whole \\bibitem{*} brown
+    keyword whole \\cite[*]{*} brown
+    keyword whole \\cite{*} brown
+    keyword whole \\[+] brown
+    keyword whole \\- brown
+    keyword whole \\sloppy brown
+    keyword whole \\+[*][*]{*}{*}{*} cyan
+    keyword whole \\+[*][*]{*}{*} cyan
+    keyword whole \\+[*]{*}{*}{*} cyan
+    keyword whole \\+[*]{*}{*} cyan
+    keyword whole \\+[*]{*} cyan
+    keyword whole \\+{*}{*}{*}{*} cyan
+    keyword whole \\+{*}{*}{*} cyan
+    keyword whole \\+{*}{*} cyan
+    keyword whole \\+{*} cyan
+    keyword whole \\+ cyan
+
+
+
+context \\pagenumbering{ } brown
+    keyword arabic cyan
+    keyword roman cyan
+    keyword alph cyan
+    keyword Roman cyan
+    keyword Alph cyan
+
+context % \n brown
+
+context exclusive \\begin{verbatim} \\end{verbatim} white
+
+# mathematical formulas
+# context $ $ green
+context exclusive \\begin{equation} \\end{equation} green
+context exclusive \\begin{displaymath} \\end{displaymath} green
+context exclusive \\begin{eqnarray} \\end{eqnarray} green

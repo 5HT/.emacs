@@ -1,0 +1,283 @@
+# Author   : Sergei Trofimovich <slyfox@inbox.ru>
+# Language : haskell
+#
+# 'Syntax rules for the C and the C++ programming languages' is taken as base
+# (haskell compilers support CPP macros)
+#
+# haskell keywords and reserved symbols are grabbed from ghc-6.10.1/compiler/parser/Lexer.hs
+
+context default
+
+# haskell keywords
+
+#   reserved keywords:
+
+#   unused symbols
+    keyword whole _\[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\] brightmagenta
+
+    keyword whole as brown
+    keyword whole case brown
+    keyword whole class brown
+    keyword whole data brown
+    keyword whole default brown
+    keyword whole deriving brown
+    keyword whole do brown
+    keyword whole else brown
+    keyword whole hiding brown
+    keyword whole if brown
+    keyword whole import brown
+    keyword whole in brown
+    keyword whole infix brown
+    keyword whole infixl brown
+    keyword whole infixr brown
+    keyword whole instance brown
+    keyword whole let brown
+    keyword whole module brown
+    keyword whole newtype brown
+    keyword whole of brown
+    keyword whole qualified brown
+    keyword whole then brown
+    keyword whole type brown
+    keyword whole where brown
+
+#   extension keywords
+    keyword whole forall brown
+    keyword whole mdo brown
+    keyword whole family brown
+    keyword whole group brown
+    keyword whole by brown
+    keyword whole using brown
+
+#   ffi
+    keyword whole foreign brown
+    keyword whole export brown
+    keyword whole label brown
+    keyword whole dynamic brown
+    keyword whole safe brown
+    keyword whole threadsafe brown
+    keyword whole unsafe brown
+    keyword whole stdcall brown
+    keyword whole ccall brown
+    keyword whole dotnet brown
+
+    keyword whole rec brown
+    keyword whole proc brown
+
+#   other
+    keyword . cyan
+#    keyword whole .. cyan
+
+#   unboxed (started from upcase)
+    keyword whole \{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\]# cyan
+#   types/modules
+    keyword whole \{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\] cyan
+
+# C keywords (TODO: remove unused in haskell source)
+    keyword whole auto brown
+    keyword whole break brown
+    keyword whole case brown
+    keyword whole char brown
+    keyword whole const brown
+    keyword whole continue brown
+    keyword whole do brown
+    keyword whole double brown
+    keyword whole else brown
+    keyword whole enum brown
+    keyword whole extern brown
+    keyword whole float brown
+    keyword whole for brown
+    keyword whole goto brown
+    keyword whole if brown
+    keyword whole int brown
+    keyword whole long brown
+    keyword whole register brown
+    keyword whole return brown
+    keyword whole short brown
+    keyword whole signed brown
+    keyword whole sizeof brown
+    keyword whole static brown
+    keyword whole struct brown
+    keyword whole switch brown
+    keyword whole typedef brown
+    keyword whole union brown
+    keyword whole unsigned brown
+    keyword whole void brown
+    keyword whole volatile brown
+    keyword whole while brown
+    keyword whole asm brown
+    keyword whole inline brown
+    keyword whole wchar_t brown
+    keyword whole ... brown
+    keyword whole linestart \{\s\t\}\[\s\t\]#*\n brightmagenta
+    keyword whole \[\s\t\]default brown
+    keyword whole linestart \[\s\t\]\{ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\}\[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\]: cyan
+
+#digits
+    keyword whole 0\{xX\}\{0123456789abcdefABCDEF\}\[0123456789abcdefABCDEF\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\] brightgreen
+    keyword whole \[0123456789\]\.\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\{eE\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\{eE\}\{\-\+\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\{0123456789\}\[0123456789\]\{eE\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\{0123456789\}\[0123456789\]\{eE\}\{\-\+\}\{0123456789\}\[0123456789\] brightgreen
+
+#comments
+    keyword {- brown
+    keyword -} brown
+    keyword -- brown
+
+    keyword \*/ brown
+    keyword /\* brown
+    keyword // brown
+
+    keyword '\\\{"abtnvfr\}' brightgreen
+
+#haskell standalone char escapes
+    keyword '\\NUL' brightgreen
+    keyword '\\SOH' brightgreen
+    keyword '\\STX' brightgreen
+    keyword '\\ETX' brightgreen
+    keyword '\\EOT' brightgreen
+    keyword '\\ENQ' brightgreen
+    keyword '\\ACK' brightgreen
+    keyword '\\BEL' brightgreen
+    keyword '\\BS' brightgreen
+    keyword '\\HT' brightgreen
+    keyword '\\LF' brightgreen
+    keyword '\\VT' brightgreen
+    keyword '\\FF' brightgreen
+    keyword '\\CR' brightgreen
+    keyword '\\SO' brightgreen
+    keyword '\\SI' brightgreen
+    keyword '\\DLE' brightgreen
+    keyword '\\DC1' brightgreen
+    keyword '\\DC2' brightgreen
+    keyword '\\DC3' brightgreen
+    keyword '\\DC4' brightgreen
+    keyword '\\NAK' brightgreen
+    keyword '\\SYN' brightgreen
+    keyword '\\ETB' brightgreen
+    keyword '\\CAN' brightgreen
+    keyword '\\EM' brightgreen
+    keyword '\\SUB' brightgreen
+    keyword '\\ESC' brightgreen
+    keyword '\\FS' brightgreen
+    keyword '\\GS' brightgreen
+    keyword '\\RS' brightgreen
+    keyword '\\US' brightgreen
+    keyword '\\SP' brightgreen
+    keyword '\\DEL' brightgreen
+
+    keyword '\\\{0123\}\{01234567\}\{01234567\}' brightgreen
+    keyword '\\'' brightgreen
+    keyword '\\\\' brightgreen
+    keyword '\\0' brightgreen
+    keyword '\{\s!"#$%&()\*\+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ\}' brightgreen
+
+# some punctuation characters
+    keyword whole $ brown
+    keyword whole ! cyan
+    keyword whole && cyan
+    keyword whole \* brown
+    keyword whole \+ brown
+    keyword whole / brown
+    keyword whole < brown
+    keyword whole > brown
+    keyword whole ^ cyan
+    keyword whole || cyan
+    keyword whole | cyan
+
+    keyword ~ cyan
+    keyword , brightcyan
+    keyword - brown
+    keyword : brightcyan
+    keyword ; brown
+    keyword = brown
+    keyword { cyan
+    keyword } cyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
+
+# comments
+context exclusive /\* \*/ brown
+    spellcheck
+
+context exclusive {-# #-} green
+    spellcheck
+
+context exclusive {- -} brown
+    spellcheck
+
+context exclusive // \n brown
+    spellcheck
+
+context exclusive \-\- \n brown
+    spellcheck
+
+# C macros
+context linestart # \n brightred
+    keyword \\\n brown
+    keyword /\**\*/ brown
+    keyword //*\n brown
+    keyword "+" red
+    keyword <+> red
+
+
+context " " green
+    spellcheck
+
+#haskell escapes in ""s
+    keyword \\NUL brightgreen
+    keyword \\SOH brightgreen
+    keyword \\STX brightgreen
+    keyword \\ETX brightgreen
+    keyword \\EOT brightgreen
+    keyword \\ENQ brightgreen
+    keyword \\ACK brightgreen
+    keyword \\BEL brightgreen
+    keyword \\BS brightgreen
+    keyword \\HT brightgreen
+    keyword \\LF brightgreen
+    keyword \\VT brightgreen
+    keyword \\FF brightgreen
+    keyword \\CR brightgreen
+    keyword \\SO brightgreen
+    keyword \\SI brightgreen
+    keyword \\DLE brightgreen
+    keyword \\DC1 brightgreen
+    keyword \\DC2 brightgreen
+    keyword \\DC3 brightgreen
+    keyword \\DC4 brightgreen
+    keyword \\NAK brightgreen
+    keyword \\SYN brightgreen
+    keyword \\ETB brightgreen
+    keyword \\CAN brightgreen
+    keyword \\EM brightgreen
+    keyword \\SUB brightgreen
+    keyword \\ESC brightgreen
+    keyword \\FS brightgreen
+    keyword \\GS brightgreen
+    keyword \\RS brightgreen
+    keyword \\US brightgreen
+    keyword \\SP brightgreen
+    keyword \\DEL brightgreen
+
+    keyword \\" brightgreen
+    keyword %% brightgreen
+    keyword %\[#0\s-\+,\]\[0123456789\*\]\[.\]\[0123456789\*\]\[L\]\{eEfgGoxX\} brightgreen
+    keyword %\[0\s-\+,\]\[0123456789\*\]\[.\]\[0123456789\*\]\[hl\]\{diuxX\} brightgreen
+    keyword %\[hl\]n brightgreen
+    keyword %\[-\]\[0123456789\*\]\[.\]\[0123456789\*\]s brightgreen
+    keyword %[*] brightgreen
+    keyword %c brightgreen
+    keyword %p brightgreen
+    keyword \\\{0123\}\{01234567\}\{01234567\} brightgreen
+    keyword \\\\ brightgreen
+    keyword \\' brightgreen
+    keyword \\\{abtnvfr\} brightgreen
+
+# infix binop
+context exclusive ` ` cyan

@@ -1,0 +1,344 @@
+# SQL syntax highlighting for CoolEdit
+# by Walery Studennikov <despair@sama.ru>
+
+caseinsensitive
+
+context default
+    keyword whole abort brown
+    keyword whole absolute brown
+    keyword whole action brown
+    keyword whole ada brown
+    keyword whole add brown
+    keyword whole all brown
+    keyword whole allocate brown
+    keyword whole alter brown
+    keyword whole and brown
+    keyword whole any brown
+    keyword whole are brown
+    keyword whole as brown
+    keyword whole asc brown
+    keyword whole assertion brown
+    keyword whole at brown
+    keyword whole authorization brown
+    keyword whole auto_increment brown
+    keyword whole begin brown
+    keyword whole between brown
+    keyword whole bigint brown
+    keyword whole bit brown
+    keyword whole bit_length brown
+    keyword whole blob brown
+    keyword whole both brown
+    keyword whole by brown
+    keyword whole cascade brown
+    keyword whole cascaded brown
+    keyword whole case brown
+    keyword whole cast brown
+    keyword whole catalog brown
+    keyword whole char brown
+    keyword whole char_length brown
+    keyword whole character brown
+    keyword whole character_length brown
+    keyword whole check brown
+    keyword whole close brown
+    keyword whole coalesce brown
+    keyword whole collate brown
+    keyword whole collation brown
+    keyword whole column brown
+    keyword whole commit brown
+    keyword whole compile brown
+    keyword whole connect brown
+    keyword whole connection brown
+    keyword whole constraint brown
+    keyword whole constraint brown
+    keyword whole constraints brown
+    keyword whole continue brown
+    keyword whole copy brown
+    keyword whole corresponding brown
+    keyword whole create brown
+    keyword whole cross brown
+    keyword whole current brown
+    keyword whole current_date brown
+    keyword whole current_time brown
+    keyword whole current_timestamp brown
+    keyword whole current_user brown
+    keyword whole cursor brown
+    keyword whole database brown
+    keyword whole date brown
+    keyword whole datetime brown
+    keyword whole day brown
+    keyword whole deallocate brown
+    keyword whole dec brown
+    keyword whole decimal brown
+    keyword whole declare brown
+    keyword whole default brown
+    keyword whole deferrable brown
+    keyword whole deferred brown
+    keyword whole delete brown
+    keyword whole desc brown
+    keyword whole describe brown
+    keyword whole descriptor brown
+    keyword whole diagnostics brown
+    keyword whole disconnect brown
+    keyword whole distinct brown
+    keyword whole domain brown
+    keyword whole double brown
+    keyword whole drop brown
+    keyword whole else brown
+    keyword whole encoding brown
+    keyword whole end brown
+    keyword whole end-exec brown
+    keyword whole enum brown
+    keyword whole escape brown
+    keyword whole except brown
+    keyword whole exception brown
+    keyword whole exec brown
+    keyword whole execute brown
+    keyword whole exists brown
+    keyword whole external brown
+    keyword whole extract brown
+    keyword whole false brown
+    keyword whole fetch brown
+    keyword whole first brown
+    keyword whole float brown
+    keyword whole for brown
+    keyword whole foreign brown
+    keyword whole fortran brown
+    keyword whole found brown
+    keyword whole from brown
+    keyword whole full brown
+    keyword whole get brown
+    keyword whole global brown
+    keyword whole go brown
+    keyword whole goto brown
+    keyword whole grant brown
+    keyword whole group brown
+    keyword whole having brown
+    keyword whole hour brown
+    keyword whole identity brown
+    keyword whole if brown
+    keyword whole immediate brown
+    keyword whole in brown
+    keyword whole include brown
+    keyword whole index brown
+    keyword whole indicator brown
+    keyword whole initially brown
+    keyword whole inner brown
+    keyword whole input brown
+    keyword whole insensitive brown
+    keyword whole insert brown
+    keyword whole int brown
+    keyword whole integer brown
+    keyword whole intersect brown
+    keyword whole interval brown
+    keyword whole into brown
+    keyword whole is brown
+    keyword whole isolation brown
+    keyword whole join brown
+    keyword whole key brown
+    keyword whole key brown
+    keyword whole language brown
+    keyword whole last brown
+    keyword whole leading brown
+    keyword whole left brown
+    keyword whole level brown
+    keyword whole like brown
+    keyword whole local brown
+    keyword whole lock brown
+    keyword whole longblob brown
+    keyword whole longtext brown
+    keyword whole loop brown
+    keyword whole match brown
+    keyword whole mediumblob brown
+    keyword whole mediumint brown
+    keyword whole mediumtext brown
+    keyword whole merge brown
+    keyword whole minute brown
+    keyword whole minus brown
+    keyword whole module brown
+    keyword whole month brown
+    keyword whole names brown
+    keyword whole national brown
+    keyword whole natural brown
+    keyword whole nchar brown
+    keyword whole next brown
+    keyword whole no brown
+    keyword whole none brown
+    keyword whole not brown
+    keyword whole null brown
+    keyword whole nullif brown
+    keyword whole numeric brown
+    keyword whole octet_length brown
+    keyword whole of brown
+    keyword whole offline brown
+    keyword whole on brown
+    keyword whole online brown
+    keyword whole only brown
+    keyword whole open brown
+    keyword whole option brown
+    keyword whole or brown
+    keyword whole order brown
+    keyword whole outer brown
+    keyword whole output brown
+    keyword whole overlaps brown
+    keyword whole pad brown
+    keyword whole partial brown
+    keyword whole pascal brown
+    keyword whole position brown
+    keyword whole precision brown
+    keyword whole prepare brown
+    keyword whole preserve brown
+    keyword whole primary brown
+    keyword whole primary brown
+    keyword whole prior brown
+    keyword whole privileges brown
+    keyword whole procedure brown
+    keyword whole public brown
+    keyword whole read brown
+    keyword whole real brown
+    keyword whole rebuild brown
+    keyword whole references brown
+    keyword whole relative brown
+    keyword whole replace brown
+    keyword whole restrict brown
+    keyword whole revoke brown
+    keyword whole right brown
+    keyword whole rollback brown
+    keyword whole rows brown
+    keyword whole schema brown
+    keyword whole scroll brown
+    keyword whole second brown
+    keyword whole section brown
+    keyword whole select brown
+    keyword whole sequence brown
+    keyword whole session brown
+    keyword whole session_user brown
+    keyword whole set brown
+    keyword whole size brown
+    keyword whole smallint brown
+    keyword whole some brown
+    keyword whole space brown
+    keyword whole sql brown
+    keyword whole sqlca brown
+    keyword whole sqlstate brown
+    keyword whole sqlwarning brown
+    keyword whole substring brown
+    keyword whole system_user brown
+    keyword whole table brown
+    keyword whole tablespace brown
+    keyword whole template brown
+    keyword whole temporary brown
+    keyword whole text brown
+    keyword whole then brown
+    keyword whole time brown
+    keyword whole truncate brown
+    keyword whole timestamp brown
+    keyword whole timezone_hour brown
+    keyword whole timezone_minute brown
+    keyword whole tinyblob brown
+    keyword whole tinyint brown
+    keyword whole tinytext brown
+    keyword whole to brown
+    keyword whole trailing brown
+    keyword whole transaction brown
+    keyword whole translation brown
+    keyword whole trigger brown
+    keyword whole trim brown
+    keyword whole true brown
+    keyword whole type brown
+    keyword whole union brown
+    keyword whole unique brown
+    keyword whole unknown brown
+    keyword whole unsigned brown
+    keyword whole update brown
+    keyword whole usage brown
+    keyword whole use brown
+    keyword whole user brown
+    keyword whole using brown
+    keyword whole value brown
+    keyword whole values brown
+    keyword whole varchar brown
+    keyword whole varying brown
+    keyword whole view brown
+    keyword whole when brown
+    keyword whole whenever brown
+    keyword whole where brown
+    keyword whole while brown
+    keyword whole with brown
+    keyword whole work brown
+    keyword whole write brown
+    keyword whole year brown
+    keyword whole zone brown
+
+    keyword /\* brown
+    keyword \*/ brown
+    keyword -- brown
+
+    keyword > brightcyan
+    keyword < brightcyan
+    keyword \+ brightcyan
+    keyword - brightcyan
+    keyword \* brightcyan
+    keyword / brightcyan
+    keyword % brightcyan
+    keyword = brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword , brightcyan
+    keyword ; brightcyan
+    keyword . white
+
+# PostgreSQL specific
+    keyword aggregate brown
+    keyword checkpoint brown
+    keyword cluster brown
+    keyword conversion brown
+    keyword listen brown
+    keyword notify brown
+    keyword operator brown
+    keyword reindex brown
+    keyword savepoint brown
+    keyword unlisten brown
+    keyword vacuum brown
+
+    keyword createdb white
+    keyword createuser white
+    keyword nocreatedb white
+    keyword nocreateuser white
+    keyword password white
+    keyword sysid white
+
+    keyword currval white
+    keyword nextval white
+    keyword pg_database white
+    keyword pg_group white
+    keyword pg_shadow white
+    keyword setval white
+    keyword stdin white
+
+# PostgreSQL sequences
+    keyword cache white
+    keyword increment white
+    keyword maxvalue white
+    keyword minvalue white
+    keyword start white
+
+# MySQL comment
+context linestart # \n brown
+    spellcheck
+
+# ANSI SQL comment
+context exclusive -- \n brown
+    spellcheck
+
+context exclusive /\* \*/ brown
+    spellcheck
+
+context ' ' green
+    keyword \\' green
+
+context " " green
+    keyword \\" green
+
+# Beckticks are used to escape reserved words in MySQL
+context ` ` cyan
+    keyword . white

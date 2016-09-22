@@ -1,0 +1,182 @@
+#
+# JavaScript syntax highlighting
+# for MC Editor/CoolEdit
+#
+# Author: Vlad Romanenko <VladRomanenko@ukr.net>
+# Based on c.syntax
+#
+# TODO:
+# Highlight JS regexpressions /../
+# More built-in functions
+#
+# 2002-09-17  Vlad Romanenko <VladRomanenko@ukr.net>
+#    * More C and Java consistency by Pavel Roskin <proski@gnu.org>.
+#    * Advanced number highlighting.
+#
+# 2002-09-16  Vlad Romanenko <VladRomanenko@ukr.net>
+#    * Initial public release.
+#
+
+context default
+
+    #=========================
+    # Keywords
+    keyword whole arguments brown
+    keyword whole break brown
+    keyword whole caller brown
+    keyword whole case brown
+    keyword whole catch brown
+    keyword whole constructor brown
+    keyword whole continue brown
+    keyword whole else brown
+    keyword whole default brown
+    keyword whole delete brown
+    keyword whole for brown
+    keyword whole function brown
+    keyword whole if brown
+    keyword whole in brown
+    keyword whole instanceof brown
+    keyword whole new brown
+    keyword whole prototype brown
+    keyword whole return brown
+    keyword whole switch brown
+    keyword whole this brown
+    keyword whole throw brown
+    keyword whole try brown
+    keyword whole typeof brown
+    keyword whole var brown
+    keyword whole while brown
+    keyword whole with brown
+
+    #=========================
+    # Objects
+    keyword whole ActiveXObject brown
+    keyword whole Array brown
+    keyword whole Boolean brown
+    keyword whole Date brown
+    keyword whole Dictionary brown
+    keyword whole Enumerator brown
+    keyword whole FileSystemObject brown
+    keyword whole Function brown
+    keyword whole Global brown
+    keyword whole Image brown
+    keyword whole Math brown
+    keyword whole Number brown
+    keyword whole Object brown
+    keyword whole TextStream brown
+    keyword whole RegExp brown
+    keyword whole VBArray brown
+
+    #=========================
+    # Most common functions
+    keyword whole alert brown
+    keyword whole escape brown
+    keyword whole eval brown
+    keyword whole indexOf brown
+    keyword whole isNaN brown
+    keyword whole toString brown
+    keyword whole unescape brown
+    keyword whole valueOf brown
+
+    #=========================
+    # Constants
+    keyword whole false brightgreen
+    keyword whole null brightgreen
+    keyword whole true brightgreen
+    keyword whole undefined brown
+
+    #=========================
+    # Comments
+    keyword /\* brown
+    keyword \*/ brown
+    keyword // brown
+
+    #=========================
+    # Numbers
+    wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_.
+
+    keyword whole 0\{xX\}\{0123456789abcdefABCDEF\}\[0123456789abcdefABCDEF\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\] brightgreen
+    keyword whole \[0123456789\]\.\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\{eE\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\{eE\}\{\-\+\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\{0123456789\}\[0123456789\]\{eE\}\{0123456789\}\[0123456789\] brightgreen
+    keyword whole \{0123456789\}\[0123456789\]\.\{0123456789\}\[0123456789\]\{eE\}\{\-\+\}\{0123456789\}\[0123456789\] brightgreen
+
+    #=========================
+    # Special symbols
+    keyword \. brown
+    keyword \* brown
+    keyword \+ brown
+    keyword - brown
+    keyword / brown
+    keyword % brown
+    keyword = brown
+    keyword ! brown
+    keyword & brown
+    keyword | brown
+    keyword ^ brown
+    keyword ~ brown
+    keyword > brown
+    keyword < brown
+
+    #=========================
+    # Separators
+    keyword { brightcyan
+    keyword } brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+    keyword , brightcyan
+    keyword ? brightcyan
+    keyword : brightcyan
+    keyword ; brightmagenta
+
+
+#=============================
+# Comments
+
+context exclusive /\* \*/ brown
+    spellcheck
+    keyword whole BUG brightred
+    keyword whole FixMe brightred
+    keyword whole FIXME brightred
+    keyword whole Note brightred
+    keyword whole NOTE brightred
+    keyword whole ToDo brightred
+    keyword whole TODO brightred
+    keyword !!\[!\] brightred
+    keyword ??\[?\] brightred
+
+
+context exclusive // \n brown
+    spellcheck
+    keyword whole BUG brightred
+    keyword whole FixMe brightred
+    keyword whole FIXME brightred
+    keyword whole Note brightred
+    keyword whole NOTE brightred
+    keyword whole ToDo brightred
+    keyword whole TODO brightred
+    keyword !!\[!\] brightred
+    keyword ??\[?\] brightred
+
+
+#=============================
+# Strings
+
+context " " green
+    spellcheck
+    keyword \\\{\\'"abtnvfr\} brightgreen
+    keyword \\\{0123\}\{01234567\}\{01234567\} brightgreen
+
+    keyword ' brightgreen
+
+context ' ' green
+    spellcheck
+    keyword \\\{\\'"abtnvfr\} brightgreen
+    keyword \\\{0123\}\{01234567\}\{01234567\} brightgreen
+
+    keyword " brightgreen
